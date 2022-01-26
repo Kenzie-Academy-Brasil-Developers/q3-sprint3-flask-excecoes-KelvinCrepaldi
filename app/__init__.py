@@ -50,7 +50,7 @@ def userpost():
             json_data["data"].append(new_user)
             dump(json_data, json_file, indent=4)
         
-        return jsonify(json_data), 200
+        return jsonify(json_data), 201
 
     except NotTypeStringError as err:
         return jsonify(err.exception), err.number
